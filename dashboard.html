@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사람이 가장 빽빽하게 사는 시·도는?</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: 'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Nano',sans-serif;
+         background:#f2f4f8; color:#222; padding:32px 16px; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 30px; text-align:center; margin-bottom:6px; }
+  .sub { text-align:center; color:#667; margin-bottom:26px; font-size:14px; }
+  .card { background:#fff; border-radius:14px; box-shadow:0 2px 10px rgba(20,30,60,.08);
+          padding:22px 26px; margin-bottom:20px; }
+  .card h2 { font-size:18px; margin-bottom:16px; }
+  .row { display:flex; align-items:center; gap:10px; margin:5px 0; }
+  .lbl { flex:0 0 150px; text-align:right; font-size:13px; color:#333;
+         white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .track { flex:1; background:#eef1f6; border-radius:6px; height:20px; overflow:hidden; }
+  .bar  { display:block; height:100%; border-radius:6px; min-width:6px; }
+  .val  { flex:0 0 110px; font-size:12.5px; }
+  .answer { font-size:17px; line-height:1.6; }
+  .answer b { color:#e5484d; }
+  .src { margin-top:12px; font-size:12.5px; color:#889; line-height:1.5; }
+  .dl-btn { position:fixed; top:18px; right:18px; background:#4f7cff; color:#fff; border:none;
+            border-radius:999px; padding:11px 18px; font-size:14px; font-weight:700; cursor:pointer;
+            box-shadow:0 3px 10px rgba(30,60,180,.35); font-family:inherit; }
+  .dl-btn:hover { background:#3d66e0; }
+</style>
+</head>
+<body>
+<button class="dl-btn" onclick="downloadSelf()">⬇ 이 페이지 다운로드</button>
+<div class="wrap">
+  <h1>사람이 가장 빽빽하게 사는 시·도는?</h1>
+  <p class="sub">시·도별 인구와 1km²당 인구 밀도 · 총 인구 5,159만 명</p>
+
+  <div class="card">
+    <h2>📊 시·도별 인구</h2>
+    <div class="row"><span class="lbl" style="font-weight:600">경기도</span><span class="track"><span class="bar" style="width:100.00%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">1,310만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">서울특별시</span><span class="track"><span class="bar" style="width:74.56%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">977만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">부산광역시</span><span class="track"><span class="bar" style="width:26.22%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">344만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">경상남도</span><span class="track"><span class="bar" style="width:25.72%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">337만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">전남광주통합특별시</span><span class="track"><span class="bar" style="width:25.45%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">334만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">인천광역시</span><span class="track"><span class="bar" style="width:22.56%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">296만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">경상북도</span><span class="track"><span class="bar" style="width:19.26%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">252만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">대구광역시</span><span class="track"><span class="bar" style="width:18.03%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">236만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">충청남도</span><span class="track"><span class="bar" style="width:16.22%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">213만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">전북특별자치도</span><span class="track"><span class="bar" style="width:13.98%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">183만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">충청북도</span><span class="track"><span class="bar" style="width:12.20%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">160만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">강원특별자치도</span><span class="track"><span class="bar" style="width:11.75%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">154만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">대전광역시</span><span class="track"><span class="bar" style="width:11.35%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">149만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">울산광역시</span><span class="track"><span class="bar" style="width:8.80%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">115만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">제주특별자치도</span><span class="track"><span class="bar" style="width:5.09%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">67만 명</span></div>
+<div class="row"><span class="lbl" style="font-weight:600">세종특별자치시</span><span class="track"><span class="bar" style="width:2.44%;background:#4f7cff"></span></span><span class="val" style="color:#4f7cff">32만 명</span></div>
+  </div>
+
+  <div class="card">
+    <h2>🏙 1km²마다 사는 사람 (인구 밀도)</h2>
+    <div class="row"><span class="lbl" style="font-weight:700">서울특별시</span><span class="track"><span class="bar" style="width:100.00%;background:#e5484d"></span></span><span class="val" style="color:#e5484d">16,144명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">부산광역시</span><span class="track"><span class="bar" style="width:27.64%;background:#aebbdd"></span></span><span class="val" style="color:#555">4,463명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">인천광역시</span><span class="track"><span class="bar" style="width:17.23%;background:#aebbdd"></span></span><span class="val" style="color:#555">2,782명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">대전광역시</span><span class="track"><span class="bar" style="width:17.08%;background:#aebbdd"></span></span><span class="val" style="color:#555">2,758명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">대구광역시</span><span class="track"><span class="bar" style="width:9.76%;background:#aebbdd"></span></span><span class="val" style="color:#555">1,576명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">경기도</span><span class="track"><span class="bar" style="width:7.97%;background:#aebbdd"></span></span><span class="val" style="color:#555">1,287명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">울산광역시</span><span class="track"><span class="bar" style="width:6.74%;background:#aebbdd"></span></span><span class="val" style="color:#555">1,088명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">세종특별자치시</span><span class="track"><span class="bar" style="width:4.27%;background:#aebbdd"></span></span><span class="val" style="color:#555">689명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">제주특별자치도</span><span class="track"><span class="bar" style="width:2.24%;background:#aebbdd"></span></span><span class="val" style="color:#555">361명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">경상남도</span><span class="track"><span class="bar" style="width:1.98%;background:#aebbdd"></span></span><span class="val" style="color:#555">320명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">전남광주통합특별시</span><span class="track"><span class="bar" style="width:1.61%;background:#aebbdd"></span></span><span class="val" style="color:#555">260명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">충청남도</span><span class="track"><span class="bar" style="width:1.60%;background:#aebbdd"></span></span><span class="val" style="color:#555">258명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">전북특별자치도</span><span class="track"><span class="bar" style="width:1.50%;background:#aebbdd"></span></span><span class="val" style="color:#555">227명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">충청북도</span><span class="track"><span class="bar" style="width:1.50%;background:#aebbdd"></span></span><span class="val" style="color:#555">216명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">경상북도</span><span class="track"><span class="bar" style="width:1.50%;background:#aebbdd"></span></span><span class="val" style="color:#555">137명</span></div>
+<div class="row"><span class="lbl" style="font-weight:400">강원특별자치도</span><span class="track"><span class="bar" style="width:1.50%;background:#aebbdd"></span></span><span class="val" style="color:#555">91명</span></div>
+  </div>
+
+  <div class="card">
+    <h2>✅ 결론</h2>
+    <p class="answer">사람이 가장 빽빽하게 사는 시·도는 <b>서울특별시</b>으로,
+    1km²당 약 <b>16,144명</b>이 삽니다. (2위 부산광역시 4,463명의 약 3배)</p>
+    <p class="src">데이터 출처: ko.wikipedia.org 「대한민국의 행정 구역」 문서의 시·도별 표 (sido.csv, 17개 시·도 + 계)<br>
+    ※ 「전남광주통합특별시」는 문서 표에 포함된 통합(계획) 시·도 기준입니다.</p>
+  </div>
+</div>
+<script>
+function downloadSelf() {
+  var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'dashboard.html';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+}
+</script>
+
+</body></html>
